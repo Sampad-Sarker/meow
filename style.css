@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-auto-flow: dense;
+  grid-template-rows: masonry;
+
+  gap: 0.8em;
+}
+.container img {
+  height: 100%;
+  object-fit: cover;
+}
+.container img:nth-child(odd) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+/* .container img:nth-child(even) {
+  grid-column: span 1;
+  grid-row: span 1;
+} */
+/* .container img:nth-child(3n + 1) {
+  grid-column: span 2;
+} */
+.container img:nth-child(3n + 2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+img {
+  max-width: 100%;
+}
+img:hover {
+  transform: scale(1.0125);
+}
+/* background-image: url("https://source.unsplash.com/random/?cat"); */
